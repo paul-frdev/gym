@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '',
+        primary: '#ef4444',
       },
       fontFamily: {
-        custom: ['you font name'],
+        logo: ['Pacifico'],
+        body: ['Roboto'],
       },
     },
   },
