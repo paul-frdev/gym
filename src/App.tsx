@@ -1,10 +1,11 @@
+import { Hero } from './components/hero';
+import { Navbar } from './components/navbar';
 
 function App() {
   return (
-    <div >
-      <h1 className="text-3xl text-red-800 font-bold underline">
-        Hello world!
-      </h1>
+    <div className='text-body'>
+      <Navbar />
+      <Hero />
     </div>
   );
 }
