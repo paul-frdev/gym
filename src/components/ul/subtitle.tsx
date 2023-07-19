@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
+import { cn } from '../../libs/utlls';
 
 interface SubtitleProps {
   subtitle: string;
+  className?: string;
 }
-export const Subtitle: FC<SubtitleProps> = ({ subtitle }) => {
+export const Subtitle: FC<SubtitleProps> = ({ subtitle, className }) => {
   return (
-    <p className='text-center text-md'>{subtitle}</p>
+    <p className={cn(`text-center text-md mb-4`, className)}>{subtitle}</p>
   )
 }
