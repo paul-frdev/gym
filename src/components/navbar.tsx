@@ -1,34 +1,8 @@
 import React from 'react'
 import { Button } from './ul/button'
 import { Container } from './ul/container'
+import { sections } from '../constants'
 
-
-const sections = [
-  {
-    name: 'Home',
-    href: '/'
-  },
-  {
-    name: 'About',
-    href: '/about-us'
-  },
-  {
-    name: 'Services',
-    href: '/services'
-  },
-  {
-    name: 'Trainers',
-    href: '/trainers'
-  },
-  {
-    name: 'Prices',
-    href: '/prices'
-  },
-  {
-    name: 'Blog',
-    href: '/blog'
-  },
-]
 
 export const Navbar = () => {
   return (
