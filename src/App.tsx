@@ -6,10 +6,12 @@ import { Navbar } from './components/navbar';
 import { Pricing } from './components/pricing';
 import { Services } from './components/services';
 import { Trainers } from './components/trainers';
+import ModalProvider from './providers/modalProvider';
 
 function App() {
   return (
-    <div className='text-body'>
+    <div className="text-body">
+      <ModalProvider />
       <Navbar />
       <Hero />
       <AboutUs />
