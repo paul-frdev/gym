@@ -5,7 +5,7 @@ import about from '../images/about.jpeg';
 
 export const AboutUs = () => {
   return (
-    <div className="bg-gray-200">
+    <div id='about-us' className="bg-gray-200">
       <Container className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1  items-center gap-x-4 p-2 md:p-4">
         <div className="flex justify-center items-center w-full h-full">
           <img className="rounded-md w-full h-full md:w-[90%] md:h-[90%] m-auto object-cover object-center" src={about} alt="image" />

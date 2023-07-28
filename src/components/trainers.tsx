@@ -8,7 +8,7 @@ import { Cart } from './ul/cart';
 
 export const Trainers = () => {
   return (
-    <div className="bg-gray-200 pb-16">
+    <div id='trainers' className="bg-gray-200 pb-16">
       <Container className="max-w-[1200px]">
         <Heading title="Trainers" />
         <Title title="Meet our Experienced Trainers" />

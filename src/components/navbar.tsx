@@ -4,6 +4,7 @@ import { Container } from './ul/container';
 import { sections } from '../constants';
 import { MobileMenu } from './mobileMenu';
 import useViewModal from '../hooks/useViewModal';
+import { smoothScrollToSection } from '../libs/utlls';
 
 export const Navbar = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
@@ -15,9 +16,16 @@ export const Navbar = () => {
   }, [isOpenNav]);
 
   const onPreview: MouseEventHandler<HTMLButtonElement> = () => {
-    console.log('click');
-
     viewModal.onOpen('');
+  };
+
+  const handleClick: MouseEventHandler<HTMLLIElement> = (event) => {
+    event.preventDefault()
+    const targetSection = event.currentTarget.dataset.href;
+
+    if (targetSection) {
+      smoothScrollToSection(`#${targetSection}`);
+    }
   };
 
   return (
@@ -29,7 +37,7 @@ export const Navbar = () => {
         <nav className="hidden md:block">
           <ul className="flex items-center justify-between gap-x-2 min-[910px]:gap-x-6 min-[1120px]:gap-x-10 text-md  min-[910px]:uppercase">
             {sections.map((section: any) => (
-              <li className="cursor-pointer hover:text-primary transition" key={section.name}>
+              <li className="cursor-pointer hover:text-primary transition" data-href={section.href} onClick={handleClick} key={section.name}>
                 <a href={section.href}>{section.name}</a>
               </li>
             ))}

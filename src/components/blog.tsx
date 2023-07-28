@@ -8,7 +8,7 @@ import { Container } from './ul/container';
 
 export const Blog = () => {
   return (
-    <div className="mb-20">
+    <div id='blog' className="mb-20">
       <Container className="max-w-[1200px]">
         <Heading title="Our Blog" />
         <Title title="Latest From Our Blog" />

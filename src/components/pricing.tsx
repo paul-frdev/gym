@@ -10,7 +10,7 @@ import useViewModal from '../hooks/useViewModal';
 export const Pricing = () => {
   const subscribeViewModal = useViewModal();
   return (
-    <div className="bg-white pb-10">
+    <div id='prices' className="bg-white pb-10">
       <Container className="max-w-[1150px]">
         <Heading title="Pricing" />
         <Title title="Join Suitable Plan" />

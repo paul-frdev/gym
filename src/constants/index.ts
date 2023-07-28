@@ -1,26 +1,26 @@
 export const sections = [
   {
     name: 'Home',
-    href: '/',
+    href: 'home',
   },
   {
     name: 'About',
-    href: '/about-us',
+    href: 'about-us',
   },
   {
     name: 'Services',
-    href: '/services',
+    href: 'services',
   },
   {
     name: 'Trainers',
-    href: '/trainers',
+    href: 'trainers',
   },
   {
     name: 'Prices',
-    href: '/prices',
+    href: 'prices',
   },
   {
     name: 'Blog',
-    href: '/blog',
+    href: 'blog',
   },
 ];

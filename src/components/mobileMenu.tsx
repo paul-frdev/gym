@@ -16,7 +16,6 @@ export const MobileMenu: FC<MobileMenuProps> = ({ isOpen, handleToggleNav, setIs
 
   useEffect(() => {
     if (rootDiv.current === null) {
-      console.log('false');
       setIsOpenNav(false);
     }
   }, [rootDiv]);

@@ -7,7 +7,7 @@ import { Dumbbell, Utensils, Umbrella, CalendarCheck } from 'lucide-react';
 
 export const Services = () => {
   return (
-    <div className="bg-gray-200">
+    <div id='services' className="bg-gray-200">
       <Container className="max-w-[1200px]">
         <Heading title="Services" />
         <Title title="Which Services We Offer" />

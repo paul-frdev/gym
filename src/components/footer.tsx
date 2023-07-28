@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 import { Container } from './ul/container';
 import { Title } from './ul/title';
@@ -6,8 +6,21 @@ import { Subtitle } from './ul/subtitle';
 import { FacebookIcon, InstagramIcon, TwitterIcon, LinkedinIcon } from 'lucide-react';
 import { sections } from '../constants';
 import { SubmitForm } from './forms/submitForm';
+import { smoothScrollToSection } from '../libs/utlls';
 
 export const Footer = () => {
+
+  const handleClick: MouseEventHandler<HTMLLIElement> = (event) => {
+    event.preventDefault()
+    const targetSection = event.currentTarget.dataset.href;
+
+    console.log(targetSection === '/');
+    
+    if (targetSection) {
+      smoothScrollToSection(`#${targetSection}`);
+    }
+  };
+
   return (
     <>
       <div className="bg-black">
@@ -46,7 +59,7 @@ export const Footer = () => {
               <Title className="text-white text-left mb-2" title="Quick links" />
               <ul className="flex:col md:flex min-[1150px]:flex-col items-center md:items-start justify-center md:justify-between gap-x-4 text-[1.2rem]">
                 {sections.map((section: any) => (
-                  <li className="text-white cursor-pointer hover:text-primary transition text-left p-2" key={section.name}>
+                  <li className="text-white cursor-pointer hover:text-primary transition text-left p-2" data-href={section.href} onClick={handleClick} key={section.name}>
                     <a href={section.href}>{section.name}</a>
                   </li>
                 ))}
